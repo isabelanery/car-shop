@@ -1,6 +1,6 @@
 import { ZodSchema } from 'zod';
 import IService from '../interfaces/IService';
-import { IModel } from '../interfaces/IModel';
+import { IModel } from '../interfaces/IModel2';
 import { ErrorTypes } from '../errors/catalog';
 
 abstract class Service<T> implements IService<T> {

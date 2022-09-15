@@ -1,1 +1,1 @@
-import { IModel } from "../../../src/interfaces/IModel";
+import { IModel } from "../../../src/interfaces/IModel2";

@@ -1,4 +1,4 @@
-import { IModel } from '../../../src/interfaces/IModel';
+import { IModel } from '../../../src/interfaces/IModel2';
 
 class TestModelCreateless implements IModel<number> {
   read = async (): Promise<number[]> =>
