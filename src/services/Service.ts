@@ -31,14 +31,14 @@ abstract class Service<T> implements IService<T> {
     const parsed = this._schema.safeParse(obj);
     if (!parsed.success) throw parsed.error;
 
-    const updated = this._model.update(_id, parsed.data);
-    if (!updated) throw new Error(ErrorTypes.EntityNotFound);
+    const updated = await this._model.update(_id, parsed.data);
+    if (!updated) throw new Error('EntityNotFound');
 
     return updated;
   }
   
   public async delete(_id:string):Promise<T | null> {
-    const deleted = this._model.delete(_id);
+    const deleted = await this._model.delete(_id);
     if (!deleted) throw new Error(ErrorTypes.EntityNotFound);
 
     return deleted;

@@ -12,10 +12,11 @@ const router = Router();
 
 router.route('/')
   .get((req, res) => controller.read(req, res))
-  .post((req, res) => controller.create(req, res))
+  .post((req, res) => controller.create(req, res));
+  
+router.route('/:id')
+  .get((req, res) => controller.readOne(req, res))
   .put((req, res) => controller.update(req, res))
   .delete((req, res) => controller.delete(req, res));
-
-router.get('/:id', controller.readOne);
-
+  
 export default router;
