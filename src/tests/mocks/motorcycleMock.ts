@@ -1,13 +1,13 @@
 import { IMotorcycle } from '../../interfaces/IMotorcycle';
 
 const motorcycleMock:IMotorcycle = {
-  model: 'BMW X1',
+  model: 'BMW 1000 RR',
   year: 2022,
   color: 'black',
   status: true,
-  buyValue: 287950,
+  buyValue: 76950,
   category: 'Street',
-  engineCapacity: 7,
+  engineCapacity: 2000,
 }
 
 const motorcycleMockWithId:IMotorcycle & { _id:string } = {
