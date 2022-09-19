@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import IController from '../interfaces/IController';
 import IService from '../interfaces/IService';
 
-abstract class Controller<T> implements IController<T> {
+abstract class Controller<T> implements IController {
   constructor(protected _service: IService<T>) { }
 
   public async create(req: Request, res: Response) {
